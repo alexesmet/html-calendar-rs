@@ -1,0 +1,15 @@
+[package]
+name = "html-calendar-rs"
+version = "0.1.0"
+authors = ["alexesmet <alexes.met@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+warp = "0.3.0"
+handlebars = "3.5.3"
+chrono = "0.4.19"
+num-traits = "0.2.12"

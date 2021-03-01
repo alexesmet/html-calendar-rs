@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>html-calendar-rs</title>
+    <style>
+      body {
+        font-family: monospace;
+      }
+      table {
+        border-collapse: separate;
+        empty-cells: hide;
+      }
+    </style>
+  </head>
+  <body>
+    <table border=3 cellspacing=3 cellpadding=3>
+      <tr>
+        <td colspan="7" align=center><b>{{ name }}</b></td>
+      </tr>
+
+      <tr>
+        <td align=center>Пн</td>
+        <td align=center>Вт</td>
+        <td align=center>Ср</td>
+        <td align=center>Чт</td>
+        <td align=center>Пт</td>
+        <td align=center>Сб</td>
+        <td align=center>Вс</td>
+      </tr>
+
+      {{#each days ~}}
+      <tr>
+        {{#each this ~}}
+        <td align=right {{#if this.red}} style='color: red' {{/if}}>{{ this.txt }}</td>
+        {{/each~}}
+      </tr>
+      {{/each~}}
+
+    </table>
+    <br>
+
+    <form>
+        <label for="month">View other month: </label>
+    <br>
+    <br>
+        <input type="month" id="month" name="month" required>
+    <br>
+    <br>
+        <input type="submit">
+    </form>
+  </body>
+</html>
